@@ -32,7 +32,7 @@ for row in birthdays_df.itertuples():
             print("Connected to SMTP server")
             connection.ehlo()
             print("EHLO successful")
-           connection.starttls()
-           connection.login(user=MY_EMAIL, password=MY_PASSWORD)
-           connection.sendmail(from_addr=MY_EMAIL, to_addrs=f"{row[2]}", msg="Subject:Happy Birthday!\n\n"
+            connection.starttls()
+            connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+            connection.sendmail(from_addr=MY_EMAIL, to_addrs=f"{row[2]}", msg="Subject:Happy Birthday!\n\n"
                                                                                          f"{named_letter}\n\n")
