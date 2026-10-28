@@ -27,6 +27,11 @@ for row in birthdays_df.itertuples():
             named_letter = letter.replace("[NAME]", f"{row[1]}")
             print(named_letter)
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+            connection.set_debuglevel(1)
+
+            print("Connected to SMTP server")
+            connection.ehlo()
+            print("EHLO successful")
            connection.starttls()
            connection.login(user=MY_EMAIL, password=MY_PASSWORD)
            connection.sendmail(from_addr=MY_EMAIL, to_addrs=f"{row[2]}", msg="Subject:Happy Birthday!\n\n"
