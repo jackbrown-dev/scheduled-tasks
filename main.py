@@ -15,7 +15,7 @@ chosen_letter = random.choice(letters)
 
 
 
-MY_EMAIL = os.environ.["MY_EMAIL"]
+MY_EMAIL = os.environ["MY_EMAIL"]
 MY_PASSWORD = os.environ["MY_PASSWORD"].replace(" ","")
 
 birthdays_df = pd.read_csv("birthdays.csv")
