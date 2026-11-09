@@ -1,6 +1,6 @@
 name: Daily Script
 
-on:
+# CODED OUT TO STOP RUNNINGon:
   schedule:
     # ╔═══════════════════════════════════════════════════════════════╗
     # ║  CHANGE THE LINE BELOW to set when your script runs          ║
