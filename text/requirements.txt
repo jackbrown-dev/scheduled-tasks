@@ -1,2 +1,2 @@
-os
-from twilio.rest import Client
+requests
+twilio
